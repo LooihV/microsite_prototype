@@ -16,6 +16,18 @@ def quienes_somos():
 def nuestro_equipo():
     return render_template('our_team.html')
 
+@app.route("/noticias")
+def noticias():
+    return render_template('news.html')
+
+@app.route("/nuestro-trabajo/")
+def nuestro_trabajo():
+    return render_template('our_work.html')
+
+@app.route("/contacto/")
+def contacto():
+    return render_template('contact.html')
+
 def main():
     app.run(port=int(os.environ.get('PORT', 80)))
 
